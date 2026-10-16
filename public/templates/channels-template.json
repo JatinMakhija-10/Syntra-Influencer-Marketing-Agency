@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Tech Guy Pro",
+    "handle": "@techguypro",
+    "url": "https://youtube.com/@techguypro",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=400",
+    "niche": "Tech & Gadgets",
+    "language": "Hindi",
+    "followers": 750000,
+    "medianViews": 210000,
+    "rateCardLink": "https://drive.google.com/sample",
+    "status": "Approved",
+    "bio": "Unboxing the future of hardware"
+  },
+  {
+    "name": "AI Masterclass",
+    "handle": "@aimasterclass",
+    "url": "https://youtube.com/@aimasterclass",
+    "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=400",
+    "niche": "AI & Automation",
+    "language": "English",
+    "followers": 450000,
+    "medianViews": 160000,
+    "rateCardLink": "",
+    "status": "Approved",
+    "bio": "Step-by-step LLM fine-tuning"
+  }
+]
