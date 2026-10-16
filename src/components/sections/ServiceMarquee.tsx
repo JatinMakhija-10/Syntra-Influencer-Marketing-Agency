@@ -6,7 +6,7 @@ const MARQUEE_ITEMS = [
   'Influencer Marketing',
   'YouTube Sponsorships',
   'Creator Talent Sourcing',
-  'Transparent Rate Cards',
+  'Audited Engagement',
   'Campaign ROAS Tracking',
   'High-Conversion Brand Deals',
   'Paid Whitelisting & Spark Ads',

@@ -50,7 +50,7 @@ export default function ContactSection({ prefilledCreator }: ContactSectionProps
             </h2>
 
             <p className="text-neutral-400 text-sm sm:text-base leading-relaxed font-light">
-              Connect directly with our senior agency strategist. We will match your target audience with verified high-performance creators, lock optimal CPM rate cards, and guarantee end-to-end attribution.
+              Connect directly with our senior agency strategist. We will match your target audience with verified high-performance creators, lock optimal CPM terms, and guarantee end-to-end attribution.
             </p>
 
             {/* Quick Contact Cards */}

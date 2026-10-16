@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
 
             <p className="text-sm text-neutral-400 leading-relaxed max-w-sm">
-              Performance-driven influencer marketing agency and verified creator talent network. We pair ambitious brands with audited creators to engineer high-ROAS sponsorship integrations, locked rate cards, and multi-platform customer acquisition.
+              Performance-driven influencer marketing agency and verified creator talent network. We pair ambitious brands with audited creators to engineer high-ROAS sponsorship integrations, transparent pricing, and multi-platform customer acquisition.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
@@ -109,7 +109,7 @@ export default function Footer() {
               Campaign Partnerships Desk
             </h4>
             <p className="text-xs text-neutral-400 leading-relaxed">
-              Ready to launch a high-ROAS creator campaign? Connect directly with our agency strategy desk to lock verified creator rate cards and flight schedules.
+              Ready to launch a high-ROAS creator campaign? Connect directly with our agency strategy desk to book verified creator integrations and flight schedules.
             </p>
 
             <a

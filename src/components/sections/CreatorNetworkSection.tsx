@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Creator, CreatorNiche } from '@/types/creator';
 import { formatCompactNumber } from '@/lib/formatters';
-import RateCardModal from '../ui/RateCardModal';
 import {
   Search,
   ExternalLink,
@@ -11,10 +10,10 @@ import {
   TrendingUp,
   Users,
   Eye,
-  FileText,
   Youtube,
   Instagram,
   Facebook,
+  Sparkles,
 } from 'lucide-react';
 
 const CATEGORIES: string[] = [
@@ -42,9 +41,6 @@ export default function CreatorNetworkSection({ onSelectCreatorForBooking }: Cre
   const [selectedNiche, setSelectedNiche] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState<'followers' | 'medianViews' | 'ratio'>('followers');
-
-  // Selected creator for rate card modal
-  const [activeRateCardCreator, setActiveRateCardCreator] = useState<Creator | null>(null);
 
   const fetchCreators = async () => {
     try {
@@ -110,7 +106,7 @@ export default function CreatorNetworkSection({ onSelectCreatorForBooking }: Cre
               Approved Creators & Channels
             </h2>
             <p className="text-neutral-400 text-sm max-w-xl font-light">
-              Explore audited metrics, median performance ratios, and approved commercial rate cards for our exclusive creator roster.
+              Explore audited metrics, follower reach, and verified social profiles across our exclusive creator roster.
             </p>
           </div>
 
@@ -336,13 +332,26 @@ export default function CreatorNetworkSection({ onSelectCreatorForBooking }: Cre
 
                   {/* Card Actions */}
                   <div className="pt-3 flex items-center gap-2">
-                    <button
-                      onClick={() => setActiveRateCardCreator(creator)}
-                      className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-white/[0.04] hover:bg-[#FFD100] text-neutral-300 hover:text-[#080808] border border-white/[0.08] hover:border-[#FFD100] text-xs font-semibold uppercase tracking-wider transition-all"
+                    <a
+                      href="#contact"
+                      onClick={() => onSelectCreatorForBooking && onSelectCreatorForBooking(creator)}
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-[#FFD100]/10 hover:bg-[#FFD100] text-[#FFD100] hover:text-[#080808] border border-[#FFD100]/30 hover:border-[#FFD100] text-xs font-bold uppercase tracking-wider transition-all"
                     >
-                      <FileText className="w-3.5 h-3.5" />
-                      <span>View Rate Card</span>
-                    </button>
+                      <Sparkles className="w-3.5 h-3.5" />
+                      <span>Connect With Creator</span>
+                    </a>
+
+                    {(creator.instagramUrl || creator.youtubeUrl || creator.facebookUrl || (creator.url && creator.url !== '#')) && (
+                      <a
+                        href={creator.instagramUrl || creator.youtubeUrl || creator.facebookUrl || creator.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.1] text-neutral-300 hover:text-white border border-white/[0.08] transition-colors"
+                        title="Open Social Profile"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -350,13 +359,6 @@ export default function CreatorNetworkSection({ onSelectCreatorForBooking }: Cre
           </div>
         )}
       </div>
-
-      {/* Rate Card Preview Modal */}
-      <RateCardModal
-        creator={activeRateCardCreator}
-        onClose={() => setActiveRateCardCreator(null)}
-        onBookCreator={onSelectCreatorForBooking}
-      />
     </section>
   );
 }

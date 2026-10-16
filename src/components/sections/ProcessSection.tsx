@@ -13,9 +13,9 @@ const STEPS = [
   },
   {
     number: '02',
-    title: 'Rate Card Locking',
+    title: 'Contracting & Pricing',
     icon: FileSignature,
-    description: 'We negotiate and secure verified commercial rate cards directly, locking in optimal CPMs, legal usage rights, and guaranteed delivery.',
+    description: 'We negotiate and secure verified commercial pricing directly, locking in optimal CPMs, legal usage rights, and guaranteed delivery.',
     deliverable: 'Binding Commercial Agreements & Deliverables',
   },
   {

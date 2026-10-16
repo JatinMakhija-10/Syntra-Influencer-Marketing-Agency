@@ -294,18 +294,20 @@ export default function AdminPage() {
 
   // Handle Delete
   const handleDelete = async (id: string, name: string) => {
-    if (!confirm(`Are you sure you want to delete "${name}"?`)) return;
+    const previous = creators;
+    // Optimistically remove from list immediately for instant UI response
+    setCreators((prev) => prev.filter((c) => c.id !== id));
 
     try {
       const res = await fetch(`/api/creators/${id}`, { method: 'DELETE' });
       const data = await res.json();
       if (data.success) {
-        showMessage('success', `Channel "${name}" deleted`);
-        loadCreators();
+        showMessage('success', `Channel "${name}" removed`);
       } else {
         throw new Error(data.error);
       }
     } catch (err: any) {
+      setCreators(previous);
       showMessage('error', err.message || 'Error deleting channel');
     }
   };

@@ -60,7 +60,7 @@ export default function HeroSection() {
 
             {/* Subtitle / Value Prop */}
             <p className="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-xl font-light">
-              Syntra connects high-growth brands with audited YouTube and social creators. We engineer data-backed sponsorship campaigns, negotiate transparent rate cards, and guarantee measurable ROAS.
+              Syntra connects high-growth brands with audited YouTube and social creators. We engineer data-backed sponsorship campaigns, negotiate transparent pricing, and guarantee measurable ROAS.
             </p>
 
             {/* CTA Buttons */}
